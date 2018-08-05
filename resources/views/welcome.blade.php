@@ -17,6 +17,15 @@
     </div>
 
     <div class="row">
+        <form action="/solicitudes/create" method="post">
+            <div class="form-group">
+                {{ csrf_field() }}
+                <input type="text" name="message" class="form-control" placeholder="Crear solicitudes?">
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
         @forelse($detalle_ctas as $detalle_cta)
             <div class="col-6">
                 <p class="card-text">
