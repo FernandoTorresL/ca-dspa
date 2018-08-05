@@ -13,4 +13,4 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/acerca', 'PagesController@about');
+Route::get('/detalle_ctas/{detalle_cta}', 'DetalleCtasController@show');
