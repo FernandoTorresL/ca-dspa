@@ -46,7 +46,7 @@
 
             <div class="form-group new-sol">
                 <label for="inputCurp">CURP</label>
-                <input type="text" name="curp" class="form-control @if($errors->has('curp')) is-invalid @endif" placeholder="CURP" maxlength="18">
+                <input type="text" name="curp" class="form-control @if($errors->has('curp')) is-invalid @endif" placeholder="CURP">
                 {{--@if ($errors->any())--}}
                 @if ($errors->has('curp'))
                     @foreach($errors->get('curp') as $error)
