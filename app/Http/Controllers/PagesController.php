@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $detalle_ctas = Detalle_cta::all();
+        $detalle_ctas = Detalle_cta::paginate(10);
 
 
         return view('welcome', [

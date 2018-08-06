@@ -20,8 +20,8 @@
         <form action="/solicitudes/create" method="post">
             <div class="form-group">
                 {{ csrf_field() }}
-                <label for="inputfecha_solicitud_del">Fecha Solicitud</label>
-                <input class="form-control" type="date" name="fecha_solicitud_del" id="inputfecha_solicitud_del">
+                <label for="inputfecha_solicitud">Fecha Solicitud</label>
+                <input class="form-control" type="date" name="fecha_solicitud" id="inputfecha_solicitud">
             </div>
 
             <div class="form-group">
@@ -74,12 +74,18 @@
     <div class="row">
         @forelse($detalle_ctas as $detalle_cta)
             <div class="col-6">
-                <p class="card-text">
+                <p class="card-body">
                     {{ $detalle_cta['cuenta'] }}
                 </p>
             </div>
         @empty
             <p>No hay inventario que mostrar</p>
         @endforelse
+
+            @if(count($detalle_ctas))
+                <div class="mt-2 mx-auto">
+                    {{ $detalle_ctas->links() }}
+                </div>
+            @endif
     </div>
 @endsection

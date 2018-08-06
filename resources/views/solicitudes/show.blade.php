@@ -23,7 +23,7 @@
         USER-ID: {{ $solicitud->usuario }}
     </p>
     <p class="card-body">
-    Fecha Solicitud: {{ $solicitud->fecha_solicitud_del }}
+    Fecha Solicitud: {{ $solicitud->fecha_solicitud }}
     </p>
     <p class="card-body">
     Nombre: {{ $solicitud->primer_apellido }}-{{ $solicitud->segundo__apellido }}-{{ $solicitud->nombre }}
