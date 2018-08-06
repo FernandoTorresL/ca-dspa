@@ -15,4 +15,7 @@ Route::get('/', 'PagesController@home');
 
 Route::get('/detalle_ctas/{detalle_cta}', 'DetalleCtasController@show');
 
+Route::get('/solicitudes/{solicitud}', 'SolicitudesController@show');
+
 Route::post('/solicitudes/create', 'SolicitudesController@create');
+

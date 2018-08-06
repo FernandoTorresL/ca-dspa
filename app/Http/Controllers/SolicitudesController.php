@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class SolicitudesController extends Controller
 {
+    public function show(Solicitud $solicitud)
+    {
+        return view('solicitudes.show', [
+            'solicitud' => $solicitud
+        ]);
+    }
+
     public function create(CreateSolicitudRequest $request)
     {
         $solicitud = Solicitud::create([
@@ -31,8 +38,6 @@ class SolicitudesController extends Controller
             'id_user' => 2,
         ]);
 
-        dd($solicitud);
-
-        return 'Solicitud Created!';
+        return redirect('/solicitudes/'. $solicitud->id_solicitud);
     }
 }
