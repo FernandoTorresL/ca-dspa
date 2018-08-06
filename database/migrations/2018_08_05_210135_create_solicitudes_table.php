@@ -20,7 +20,7 @@ class CreateSolicitudesTable extends Migration
             $table->integer('lote_id');
             $table->tinyInteger('delegacion_id');
             $table->tinyInteger('subdelegacion_id');
-            $table->integer('usuario_id');
+            $table->integer('user_id');
             $table->tinyInteger('movimiento_id');
             $table->integer('gpo_actual_id');
             $table->integer('gpo_nuevo_id');
