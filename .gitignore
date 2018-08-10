@@ -104,3 +104,6 @@ modules.xml
 
 
 # End of https://www.gitignore.io/api/phpstorm+all
+
+# Users files
+application.log

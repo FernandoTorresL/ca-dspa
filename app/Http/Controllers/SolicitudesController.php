@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateSolicitudRequest;
+use App\Log;
 use App\Solicitud;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,7 @@ class SolicitudesController extends Controller
 {
     public function show(Solicitud $solicitud)
     {
+        Log::logInfo('Visitando Ver Solicitud: ' . $solicitud);
         return view('solicitudes.show', [
             'solicitud' => $solicitud
         ]);
