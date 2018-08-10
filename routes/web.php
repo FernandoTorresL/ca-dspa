@@ -19,5 +19,4 @@ Route::get('/solicitudes/{solicitud}', 'SolicitudesController@show');
 
 Route::post('/solicitudes/create', 'SolicitudesController@create');
 
-
 Auth::routes();
